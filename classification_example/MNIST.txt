@@ -1,0 +1,16 @@
+set of 70000 small images of digit handwritten by high school students and employees of the US Census Bureau.
+all images are labelled with the respective digit the y represent.
+MNIST is the hello wolrd of the machine learning. 
+there are 70000 images and each image has 784 features.
+each image is 28X28 pixels and each feature simply represents one pixel's intensity from 0(white) to 255(black).
+first 60000 images are used for training and the rest 10000 images are used for testing.
+
+You're using x[36000], which tries to access column 36000 in a DataFrame x.
+
+But you likely meant to access row number 36000, like from an image dataset (e.g., MNIST).
+You should use .iloc to access rows by index position:
+some_digit = x.iloc[36000]
+
+
+ some_digit is a pandas Series, and Series objects don’t have a .reshape() method — it's a method for NumPy arrays.
+ Convert the Series to a NumPy array first using .values or .to_numpy(), then reshape it.
